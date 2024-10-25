@@ -25,7 +25,7 @@ const errorHandler = (err, req, res, next) => {
         stackTrace: err.stack,
       });
       break;
-    case constants.FORBIDDEN: // Corrected spelling here
+    case constants.FORBIDDEN: 
       res.status(statusCode).json({
         title: "Forbidden",
         message: err.message,
@@ -47,8 +47,6 @@ const errorHandler = (err, req, res, next) => {
       });
       break;
   }
-
-  // Optional: Log the error for debugging purposes
   console.error(err);
 };
 
